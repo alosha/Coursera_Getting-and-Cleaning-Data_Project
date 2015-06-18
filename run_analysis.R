@@ -4,13 +4,13 @@ library(plyr)
 
 # 0. Read the data
 ########################################################################
-x.test <- read.table("X_test.txt")
-y.test <- read.table("y_test.txt")
-subj.test <- read.table("subject_test.txt")
+x_test <- read.table("X_test.txt")
+y_test <- read.table("y_test.txt")
+subj_test <- read.table("subject_test.txt")
 
-x.train <- read.table("X_train.txt")
-y.train <- read.table("y_train.txt")
-subj.train <- read.table("subject_train.txt")
+x_train <- read.table("X_train.txt")
+y_train <- read.table("y_train.txt")
+subj_train <- read.table("subject_train.txt")
 
 features <- read.table("features.txt") 
 
@@ -19,9 +19,9 @@ activities <- read.table("activity_labels.txt")
 
 # 1. Merges the training and the test sets to create one data set.
 ########################################################################
-x_data <- rbind(x.test, x.train)
-y_data <- rbind(y.test, y.train)
-subj_data <- rbind(subj.test, subj.train) 
+x_data <- rbind(x_test, x_train)
+y_data <- rbind(y_test, y_train)
+subj_data <- rbind(subj_test, subj_train) 
 
 
 # 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
